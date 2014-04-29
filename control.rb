@@ -3,11 +3,8 @@
 puts "Remote SSH Sender"
 puts "-------"
 puts "0. Custom SSH"
-puts "1. DC Develop"
-puts "2. DC Production"
-#puts "3. DC Develop (Rails Console)"
-#puts "4. DC Prodcution (Rails Console)"
-#puts "5. "
+puts "1. Server 1"
+puts "2. Server 2"
 
 choice = $stdin.gets.chomp.to_i
 
@@ -17,11 +14,8 @@ custom = $stdin.gets.chomp.to_s if choice == 0
 commands =
     [
     "#{custom}",
-    "deploy@direct.develop.dynamiccreative.com",
-    'deploy@direct.app.dynamiccreative.com; "cd /data/dynamiccreative/current/"',
-    'deploy@direct.develop.dynamiccreative.com; "cd /data/dynamiccreative/current/; RAILS_ENV=develop bundle exec rails console"',
-    'deploy@direct.app.dynamiccreative.com; "cd /data/dynamiccreative/current/; sudo RAILS_ENV=production bundle exec rails console"',
-    'deploy@direct.staging.dynamiccreative.com'
+    "deploy@app.myapp.com  RAILS_ENV=production bundle exec rails console",
+    "deploy@dev.myapp.com  RAILS_ENV=develop bundle exec rails console",
 ]
 
 exec("./open3.rb \"#{commands[choice]}\"")
