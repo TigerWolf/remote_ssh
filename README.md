@@ -1,11 +1,11 @@
 remote_ssh
 ==========
 
-Remote SSH commands without console lag on slow connections.
+Type SSH commands locally without needing remote server to send back each individual key stroke to avoid console lag on slow connections.
 
 Just run ./control.rb and follow the menu instructions.
 
-This is currently in Alpha, and pull requests are welcomed. Features that dont work but would be awesome are:
+This is unsupported but may be useful for someone in a similar situation.
 
 ## Limitations
 
