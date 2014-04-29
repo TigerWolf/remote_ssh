@@ -9,9 +9,8 @@ require 'io/console'
 # - Your key for the server will need to be added before running this command.
 
 shortcuts = { 
-  'dc' => 'cd /data/dynamiccreative/current; ls',
-  'dcc' => 'cd /data/dynamiccreative/current; bundle exec rails c',
-  #'dcl' => "cd /data/dynamiccreative/current; tail -f log/#{ENV['RACK_ENV']}.log " 
+  'dc' => 'cd /data/somedirectory; ls',
+  #'dcl' => " tail -f log/#{ENV['RACK_ENV']}.log " 
 }
 
 command = ARGV[0]
